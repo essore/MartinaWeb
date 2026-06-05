@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5efe8;
+  --foreground: #2f2926;
+  --muted: #73645c;
+  --surface: rgba(255, 251, 247, 0.78);
+  --line: rgba(94, 72, 61, 0.14);
+  --accent: #ae7257;
+  --accent-strong: #7f4d3b;
+  --shadow: 0 24px 64px rgba(61, 43, 35, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.75), transparent 32%),
+    linear-gradient(180deg, #f8f3ee 0%, #f3ece4 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 72px;
+}
+
+.hero,
+.intro-grid,
+.card-grid,
+.contact-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.hero {
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: stretch;
+}
+
+.hero-copy,
+.identity-card,
+.intro-card,
+.feature-card,
+.contact-card,
+.roadmap-block {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  padding: 36px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1,
+.section-head h2,
+.identity-card h2,
+.feature-card h3 {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.03em;
+}
+
+.hero-copy h1 {
+  max-width: 11ch;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.94;
+}
+
+.lede,
+.intro-card p,
+.feature-card p,
+.contact-card strong,
+.goal-list li,
+.roadmap-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.lede {
+  max-width: 58ch;
+  margin: 22px 0 0;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 999px;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.button:hover,
+.feature-card:hover,
+.contact-card:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  color: white;
+  background: var(--foreground);
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.identity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(174, 114, 87, 0.18), transparent 36%),
+    linear-gradient(180deg, rgba(255, 252, 249, 0.9), rgba(245, 236, 228, 0.92));
+}
+
+.identity-label,
+.card-index,
+.contact-card span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.identity-card h2 {
+  margin-top: auto;
+  font-size: 2.4rem;
+}
+
+.identity-card p,
+.section-head p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.identity-card strong {
+  margin-top: 18px;
+  font-size: 1.05rem;
+}
+
+.content-section {
+  margin-top: 22px;
+}
+
+.section-head {
+  margin-bottom: 18px;
+}
+
+.section-head h2 {
+  max-width: 14ch;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 0.98;
+}
+
+.intro-grid,
+.card-grid,
+.contact-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intro-card,
+.feature-card,
+.contact-card {
+  padding: 24px;
+}
+
+.intro-card p,
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.feature-card h3 {
+  margin-top: 16px;
+  font-size: 1.8rem;
+}
+
+.goal-list,
+.roadmap-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.goal-list li,
+.roadmap-list li {
+  margin-top: 12px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-card strong {
+  color: var(--foreground);
+}
+
+.roadmap-block {
+  padding: 28px;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .intro-grid,
+  .card-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1160px);
+    padding-top: 18px;
+  }
+
+  .hero-copy,
+  .identity-card,
+  .intro-card,
+  .feature-card,
+  .contact-card,
+  .roadmap-block {
+    padding: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
