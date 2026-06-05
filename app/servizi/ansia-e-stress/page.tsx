@@ -34,11 +34,11 @@ export default function AnxietyStressPage() {
       <section className="content-section roadmap-block">
         <div className="section-head">
           <p className="eyebrow">Primo passo</p>
-          <h2>Valutare insieme il percorso piu adatto.</h2>
+          <h2>Valutare insieme il percorso più adatto.</h2>
         </div>
         <p className="lede">
-          Un primo contatto serve a capire la richiesta, chiarire modalita e
-          disponibilita, e verificare se il percorso proposto e coerente con il
+          Un primo contatto serve a capire la richiesta, chiarire modalità e
+          disponibilità, e verificare se il percorso proposto è coerente con il
           bisogno della persona.
         </p>
         <a className="button button-primary" href={siteContent.identity.ctaHref}>

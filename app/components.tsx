@@ -12,25 +12,38 @@ type TextCardProps = {
   body: string;
 };
 
-export function SiteHeader() {
-  return (
-    <header className="site-header">
-      <Link className="brand" href="/">
-        <span>{siteContent.identity.name}</span>
-        <small>{siteContent.identity.role}</small>
-      </Link>
+function ContactIcon({ icon }: { icon: string }) {
+  if (icon === "wa") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.5 19.2 4 20l.9-3.3a8.2 8.2 0 1 1 2.6 2.5Z" />
+        <path d="M9.2 8.2c.2-.3.4-.3.6-.2l1.1 1.4c.1.2.1.4 0 .6l-.5.7c.6 1.1 1.5 2 2.6 2.6l.7-.5c.2-.1.4-.1.6 0l1.4 1.1c.2.1.2.4.1.6-.4.8-1 1.3-1.8 1.3-2.6-.1-6-3.5-6.1-6.1 0-.7.4-1.3 1.2-1.7Z" />
+      </svg>
+    );
+  }
 
-      <details className="nav-menu">
-        <summary>Menu</summary>
-        <nav aria-label="Navigazione principale">
-          {siteContent.navigation.map((link) => (
-            <Link key={link.href} href={link.href}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      </details>
-    </header>
+  if (icon === "tg") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m4 12 16-7-3.2 16-4.5-5.2-3.3 3.1 1-4.6L4 12Z" />
+        <path d="m10 14.3 6.6-6.2" />
+      </svg>
+    );
+  }
+
+  if (icon === "tel") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.2 5.2 10 9l-1.3 1.5c.9 1.9 2.4 3.4 4.3 4.3L14.5 13l3.8 1.8-.5 3.3c-.1.6-.6 1-1.2 1A13.6 13.6 0 0 1 5 7.4c0-.6.4-1.1 1-1.2l2.2-.4Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4.5 7.5h15v9h-15v-9Z" />
+      <path d="m5 8 7 5 7-5" />
+    </svg>
   );
 }
 
@@ -46,6 +59,13 @@ export function SiteFooter() {
 
       <div className="footer-block">
         <span className="footer-label">Verifica</span>
+        <img
+          className="order-logo"
+          src="/ordine-psicologi-marche-logo.png"
+          alt="Ordine degli Psicologi delle Marche"
+          width={70}
+          height={43}
+        />
         <a
           href={siteContent.verification.orderSearchHref}
           target="_blank"
@@ -112,6 +132,9 @@ export function ContactCards() {
           target={contact.href.startsWith("http") ? "_blank" : undefined}
           rel={contact.href.startsWith("http") ? "noreferrer" : undefined}
         >
+          <span className="contact-icon" aria-hidden="true">
+            <ContactIcon icon={contact.icon} />
+          </span>
           <span>{contact.label}</span>
           <strong>{contact.value}</strong>
         </a>

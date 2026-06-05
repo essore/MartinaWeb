@@ -59,19 +59,33 @@ a {
 
 .brand {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   min-width: 0;
 }
 
+.brand img {
+  width: 46px;
+  height: auto;
+  flex: 0 0 auto;
+}
+
 .brand span {
+  display: grid;
+  min-width: 0;
+}
+
+.brand strong {
   font-family: var(--font-display), serif;
-  font-size: 1.05rem;
+  font-size: clamp(1.35rem, 4.8vw, 1.75rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .brand small {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
 }
 
 .nav-menu {
@@ -150,6 +164,12 @@ a {
   gap: 6px;
 }
 
+.order-logo {
+  width: 70px;
+  height: auto;
+  margin: 2px 0 4px;
+}
+
 .footer-label {
   color: var(--muted);
   font-size: 0.74rem;
@@ -195,6 +215,10 @@ a {
 
 .hero {
   align-items: stretch;
+}
+
+.intro-grid {
+  margin-top: 26px;
 }
 
 .hero-copy,
@@ -392,6 +416,28 @@ a {
   color: var(--foreground);
 }
 
+.contact-icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
 .contact-note {
   margin: 14px 0 0;
   color: var(--muted);
@@ -402,6 +448,31 @@ a {
 .contact-note a {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.social-links span {
+  flex-basis: 100%;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.42);
 }
 
 .trust-card {
@@ -430,6 +501,11 @@ a {
 
   .site-header {
     margin-top: 16px;
+    padding: 12px;
+  }
+
+  .brand img {
+    width: 54px;
   }
 
   .site-footer {
@@ -504,27 +580,6 @@ a {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
   }
 
-  .nav-menu summary {
-    display: none;
-  }
-
-  .nav-menu nav,
-  .nav-menu:not([open]) nav {
-    position: static;
-    display: flex;
-    min-width: 0;
-    gap: 4px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .nav-menu nav a {
-    padding: 10px 12px;
-    font-size: 0.9rem;
-  }
-
   .hero-copy {
     padding: 36px;
   }
@@ -546,5 +601,11 @@ a {
 
   .site-footer {
     grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-menu summary {
+    display: inline-flex !important;
   }
 }

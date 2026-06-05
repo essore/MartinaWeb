@@ -5,7 +5,7 @@ import { ContactCards, PageIntro } from "../components";
 export const metadata: Metadata = {
   title: "Contatti | Dott.ssa Martina Pallottini",
   description:
-    "Contatta la Dott.ssa Martina Pallottini per disponibilita, tariffe e primo appuntamento a Fermo oppure online.",
+    "Contatta la Dott.ssa Martina Pallottini per disponibilità, tariffe e primo appuntamento a Fermo oppure online.",
 };
 
 export default function ContactsPage() {

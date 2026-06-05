@@ -25,8 +25,8 @@ export default function LocationPage() {
           <h2>{siteContent.identity.address}</h2>
           <p className="lede">
             Lo studio si trova a pochi minuti da Campiglione di Fermo. Il
-            setting e pensato per sostenere privacy, confidenzialita e
-            continuita del lavoro terapeutico.
+            setting è pensato per sostenere privacy, confidenzialità e
+            continuità del lavoro terapeutico.
           </p>
           <a
             className="button button-secondary"

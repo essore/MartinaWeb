@@ -52,7 +52,7 @@ export default function Home() {
         </div>
 
         <aside className="identity-card">
-          <span className="identity-label">Identita</span>
+          <span className="identity-label">Identità</span>
           <h2>{siteContent.identity.name}</h2>
           <p>{siteContent.identity.role}</p>
           <p>{siteContent.identity.board}</p>
@@ -93,7 +93,7 @@ export default function Home() {
 
         <div className="trust-card">
           <p className="lede">
-            Un approfondimento specifico spiega quando puo essere utile chiedere
+            Un approfondimento specifico spiega quando può essere utile chiedere
             supporto e come si struttura il percorso terapeutico.
           </p>
           <a className="button button-secondary" href="/servizi/ansia-e-stress">
@@ -118,13 +118,13 @@ export default function Home() {
       <section className="content-section" id="contatti">
         <div className="section-head">
           <p className="eyebrow">Contatti</p>
-          <h2>Scegli il modo piu semplice per concordare un primo appuntamento.</h2>
+          <h2>Scegli il modo più semplice per concordare un primo appuntamento.</h2>
         </div>
 
         <ContactCards />
 
-        <p className="contact-note">
-          I miei social:{" "}
+        <div className="social-links" aria-label="Profili social e professionali">
+          <span>I miei social</span>
           {siteContent.secondaryLinks.map((link) => (
             <a
               key={link.label}
@@ -135,7 +135,7 @@ export default function Home() {
               {link.value}
             </a>
           ))}
-        </p>
+        </div>
       </section>
 
       <section className="content-section">

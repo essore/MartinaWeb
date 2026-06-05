@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
-import { SiteFooter, SiteHeader } from "./components";
+import { SiteFooter } from "./components";
+import { SiteHeader } from "./site-header";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -16,7 +17,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Psicoterapeuta Fermo | Dott.ssa Martina Pallottini",
   description:
-    "Dott.ssa Martina Pallottini, psicologa psicoterapeuta a Fermo e online. Scopri percorsi clinici per adulti, adolescenti e bambini.",
+    "Dott.ssa Martina Pallottini, psicologa psicoterapeuta a Fermo e online. Percorsi clinici per ansia, stress e difficoltà emotive.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
