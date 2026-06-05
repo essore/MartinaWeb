@@ -10,6 +10,9 @@ Evolve the current Netlify site for Martina Pallottini into a modern, credible a
 - Validate each iteration locally before any manual release.
 - Design and refine the interface mobile-first, then extend it for larger screens.
 - Improve the site's ability to be discovered and interpreted by Google and conversational search engines such as Gemini and GPT.
+- Use both `martinapallottini.it` and the GuidaPsicologi profile as editorial sources of truth, reconciling differences in favor of the most current professional positioning.
+- Shift the editorial emphasis from generic psychological support toward psychotherapy, reflecting Martina's current qualification and registration status.
+- Treat GuidaPsicologi as a primary external credibility signal, not as a minor secondary link.
 
 ## Planned phases
 
@@ -21,16 +24,19 @@ Evolve the current Netlify site for Martina Pallottini into a modern, credible a
 - First Netlify version published manually.
 
 ### Next milestone - Real content integration
-- Replace placeholder text with curated content from the current site.
+- Replace placeholder text with curated content from the current site and the GuidaPsicologi profile.
 - Add the real sections for approach, services, studio and contact.
 - Clean the copy for readability while keeping it clinically coherent.
 - Add trusted references such as the professional register and location details.
+- Rebalance headings and service descriptions so psychotherapy is the leading frame of the site.
+- Surface GuidaPsicologi in the page as a trust-oriented reference that supports credibility, reviews, and public-facing professional activity.
 
 ### Next milestone - Visual refinement
 - Improve spacing, hierarchy, imagery and section rhythm with a mobile-first approach.
 - Add the first meaningful motion and hover behaviors.
 - Validate local behavior on mobile, tablet and desktop.
 - Prepare the next review build.
+- Introduce a minimal collapsible navigation menu when the page structure benefits from faster section access.
 
 ### Next milestone - Release candidate
 - Final content pass.
@@ -48,8 +54,8 @@ Evolve the current Netlify site for Martina Pallottini into a modern, credible a
 - One-page structure.
 - Clear identity block.
 - Minimal section architecture.
-- Contact section with placeholder channels until real data is approved.
-- Roadmap and release intent visible in the project.
+- Contact section centered on direct messaging and primary contact channels.
+- Light secondary references to external profiles such as Facebook and GuidaPsicologi.
 
 ## Non-goals for v1
 - No CMS migration.

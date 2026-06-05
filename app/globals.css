@@ -58,6 +58,7 @@ a {
 .intro-card,
 .feature-card,
 .contact-card,
+.trust-card,
 .roadmap-block {
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -230,6 +231,26 @@ a {
   color: var(--foreground);
 }
 
+.contact-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.contact-note a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.trust-card {
+  padding: 22px;
+}
+
+.trust-card .button {
+  margin-top: 20px;
+}
+
 .roadmap-block {
   padding: 22px;
 }
@@ -253,6 +274,7 @@ a {
   .intro-card,
   .feature-card,
   .contact-card,
+  .trust-card,
   .roadmap-block {
     padding: 24px;
   }
@@ -284,6 +306,7 @@ a {
   .intro-card,
   .feature-card,
   .contact-card,
+  .trust-card,
   .roadmap-block {
     padding: 28px;
   }

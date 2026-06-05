@@ -15,6 +15,10 @@ Priority order:
 - The target release platform is Netlify, not Sites.
 - The final objective is to renew `https://www.martinapallottini.it/` with a modern, mobile-first experience.
 - The site should be optimized for discoverability on Google and for content retrieval by conversational engines such as Gemini and GPT.
+- The current public content sources to reconcile are:
+  - `https://www.martinapallottini.it/`
+  - `https://www.guidapsicologi.it/studio/dottssa-martina-pallottini`
+  - GuidaPsicologi should be treated as an authoritative credibility source because it consolidates Martina's professional profile, patient feedback, and public educational contributions.
 
 ## Core Rules
 
@@ -28,6 +32,9 @@ Priority order:
 - The tone must remain professional, clinical, calm, and credible.
 - Modernization must not turn the site into generic marketing language.
 - Keep text concise, readable, and aligned with the current professional identity.
+- Editorial positioning should emphasize psychotherapy as Martina's current professional identity, not only generic psychological support.
+- When the two public sources differ in emphasis, prefer the framing that reflects Martina as a fully qualified psychotherapist already registered with the professional board.
+- GuidaPsicologi deserves visible but sober prominence as an external trust signal, stronger than Facebook and other secondary social references.
 
 ### Minimal-change default
 - Make the smallest correct change for each iteration.
@@ -53,6 +60,7 @@ Priority order:
 - Keep sections visually distinct and readable.
 - Preserve responsive behavior.
 - Prefer simple composition over large monolithic page blocks.
+- A minimal collapsible menu is appropriate when it improves navigation between sections or future pages, but it must stay visually discreet and consistent with the calm clinical tone.
 
 ### Validation and release flow
 - Validate changes locally by running the relevant checks in this workspace.
@@ -73,10 +81,10 @@ Priority order:
 - Ensure the project builds locally.
 
 ### Phase 2 - Real content integration
-- Replace placeholder copy with curated text from the current website.
+- Replace placeholder copy with curated text from the current website and the GuidaPsicologi profile.
 - Add true sections for approach, services, studio, and contact.
 - Reintroduce real contact data only when approved.
-- Improve CTA wording and information architecture.
+- Improve CTA wording and information architecture with psychotherapy as the primary positioning.
 
 ### Phase 3 - Visual refinement
 - Improve imagery and section rhythm.

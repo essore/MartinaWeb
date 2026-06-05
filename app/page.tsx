@@ -37,8 +37,8 @@ export default function Home() {
 
       <section className="content-section" id="percorso">
         <div className="section-head">
-          <p className="eyebrow">Aree principali</p>
-          <h2>Una home essenziale, pensata per accompagnare il primo orientamento.</h2>
+          <p className="eyebrow">Il percorso</p>
+          <h2>Un orientamento chiaro tra approccio clinico, percorsi e setting.</h2>
         </div>
 
         <div className="card-grid">
@@ -54,13 +54,13 @@ export default function Home() {
 
       <section className="content-section">
         <div className="section-head">
-          <p className="eyebrow">Obiettivi della pagina</p>
-          <h2>Cosa deve trasmettere il sito in questa fase.</h2>
+          <p className="eyebrow">Di cosa si occupa</p>
+          <h2>Ambiti di supporto e percorsi costruiti sulle esigenze della persona.</h2>
         </div>
 
         <ul className="goal-list">
-          {siteContent.releaseGoals.map((goal) => (
-            <li key={goal}>{goal}</li>
+          {siteContent.supportAreas.map((area) => (
+            <li key={area}>{area}</li>
           ))}
         </ul>
       </section>
@@ -68,7 +68,7 @@ export default function Home() {
       <section className="content-section" id="contatti">
         <div className="section-head">
           <p className="eyebrow">Contatti</p>
-          <h2>Riferimenti essenziali in attesa dei dati definitivi.</h2>
+          <h2>Scegli il modo piu semplice per concordare un primo appuntamento.</h2>
         </div>
 
         <div className="contact-grid">
@@ -85,18 +85,53 @@ export default function Home() {
             </a>
           ))}
         </div>
+
+        <p className="contact-note">
+          I miei social:{" "}
+          {siteContent.secondaryLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {link.value}
+            </a>
+          ))}
+        </p>
+      </section>
+
+      <section className="content-section">
+        <div className="section-head">
+          <p className="eyebrow">{siteContent.trustReference.eyebrow}</p>
+          <h2>{siteContent.trustReference.title}</h2>
+        </div>
+
+        <div className="trust-card">
+          <p className="lede">{siteContent.trustReference.body}</p>
+          <a
+            className="button button-secondary"
+            href={siteContent.trustReference.primaryLink.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {siteContent.trustReference.primaryLink.label}
+          </a>
+        </div>
       </section>
 
       <section className="content-section roadmap-block" id="roadmap">
         <div className="section-head">
-          <p className="eyebrow">Evoluzione</p>
-          <h2>Una base ordinata per integrare contenuti reali e affinare la presentazione.</h2>
+          <p className="eyebrow">Primo colloquio</p>
+          <h2>{siteContent.firstContact.title}</h2>
         </div>
 
+        <p className="lede">{siteContent.firstContact.body}</p>
+
         <ol className="roadmap-list">
-          <li>Consolidare la struttura e il tono visivo della home.</li>
-          <li>Integrare i contenuti clinici reali, lo studio e i riferimenti approvati.</li>
-          <li>Rifinire responsive, gerarchia e leggibilita prima della prossima release manuale.</li>
+          {siteContent.firstContact.points.map((point) => (
+            <li key={point}>{point}</li>
+          ))}
         </ol>
       </section>
     </main>

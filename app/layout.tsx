@@ -13,9 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Martina Pallottini",
+  title: "Martina Pallottini | Psicologa e psicoterapeuta a Fermo e online",
   description:
-    "Sito di Martina Pallottini, progettato con un approccio moderno, mobile-first e orientato alla ricerca.",
+    "Martina Pallottini, psicologa e psicoterapeuta a Fermo e online. Percorsi di ascolto, supporto psicologico e psicoterapia per bambini, adolescenti e adulti.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
