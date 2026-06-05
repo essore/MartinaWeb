@@ -1,29 +1,31 @@
 # martinaWeb
 
-This folder contains the standalone demo for Martina Pallottini, currently intended for a future Netlify release.
+This folder contains the standalone site for Martina Pallottini, already published once on Netlify and now iterated locally.
 
 ## Purpose
-- Prototype a modern replacement direction outside WordPress.
-- Keep the first version intentionally minimal.
+- Build a modern replacement for `https://www.martinapallottini.it/`.
+- Keep the current version intentionally focused and easy to evolve.
 - Preserve a scalable structure for later content and design iterations.
+- Refine the interface mobile-first before wider content expansion.
+- Improve discoverability for Google and readability for conversational search engines such as Gemini and GPT.
 
 ## Project structure
 - `app/`: homepage and global styles.
 - `content/`: centralized content used by the UI.
 - `docs/`: planning and release notes.
-- `.openai/hosting.json`: starter metadata inherited from the template. It is not the target release platform anymore.
+- `.openai/hosting.json`: starter metadata inherited from the template. It is not the active release target.
 
 ## Current state
-- Starter scaffold copied into `martinaWeb/`.
-- Minimal demo homepage implemented.
-- Development roadmap documented.
+- Starter scaffold adapted into a standalone Next site.
+- Minimal homepage implemented and first Netlify publish completed manually.
+- Current work is focused on local content cleanup and mobile-first refinement.
 
 ## Next technical step
-Install dependencies and run the local build:
+Run local validation for each iteration:
 
 ```bash
-npm install
+npm run lint
 npm run build
 ```
 
-That validation is still pending in this workspace because dependency installation has not been authorized yet.
+Remote verification and Netlify release checks are intentionally out of scope unless explicitly requested.

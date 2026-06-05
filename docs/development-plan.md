@@ -1,51 +1,54 @@
 # martinaWeb - Development Plan
 
 ## Objective
-Build a first `Sites` demo for Martina Pallottini that is modern, credible and easy to evolve before deciding how to handle the existing WordPress site.
+Evolve the current Netlify site for Martina Pallottini into a modern, credible and easy-to-grow replacement for `https://www.martinapallottini.it/`.
 
 ## Delivery strategy
 - Keep `martinaWeb/` isolated from the root workspace.
 - Use a content-first structure so copy can evolve without rewriting layout code.
-- Treat the first release as a demo milestone, not as the final production migration.
+- Treat the current published version as an intermediate milestone, not as the final production migration.
+- Validate each iteration locally before any manual release.
+- Design and refine the interface mobile-first, then extend it for larger screens.
+- Improve the site's ability to be discovered and interpreted by Google and conversational search engines such as Gemini and GPT.
 
 ## Planned phases
 
-### Day 1 - Foundation
-- Create the project folder and scaffold the `Sites` starter.
-- Define the minimal information architecture.
-- Build a small but scalable homepage.
-- Centralize content in a dedicated file.
+### Completed milestone - Foundation and first publish
+- Project folder created from the starter and adapted into a standalone site.
+- Minimal information architecture defined.
+- Small but scalable homepage implemented.
+- Content centralized in a dedicated file.
+- First Netlify version published manually.
 
-### Day 2 - Real content integration
-- Replace placeholder demo text with curated content from the current site.
+### Next milestone - Real content integration
+- Replace placeholder text with curated content from the current site.
 - Add the real sections for approach, services, studio and contact.
 - Clean the copy for readability while keeping it clinically coherent.
 - Add trusted references such as the professional register and location details.
 
-### Day 3 - Visual refinement
-- Improve spacing, hierarchy, imagery and section rhythm.
+### Next milestone - Visual refinement
+- Improve spacing, hierarchy, imagery and section rhythm with a mobile-first approach.
 - Add the first meaningful motion and hover behaviors.
-- Validate desktop and mobile behavior.
-- Prepare the first review build.
+- Validate local behavior on mobile, tablet and desktop.
+- Prepare the next review build.
 
-### Day 4 - Release candidate
+### Next milestone - Release candidate
 - Final content pass.
-- Technical validation: install dependencies, run lint and build.
-- Capture the representative preview image required for deployment.
-- Prepare the first deployable version on `Sites`.
+- Technical validation in local workspace: run lint and build.
+- Capture representative preview assets only when needed for release notes or review.
+- Prepare the next deployable Netlify version for manual release.
 
-### Day 5 - First release
-- Publish the demo release.
-- Review the hosted version.
+### Later milestone - Post-review decisions
+- Review the approved local candidate before manual release.
 - Collect decisions for either:
-  - continuing on `Sites` as a standalone modern site, or
+  - continuing on Netlify as a standalone modern site, or
   - porting the approved direction back into WordPress.
 
-## Scope of v1 demo
+## Current v1 scope
 - One-page structure.
 - Clear identity block.
 - Minimal section architecture.
-- Contact section with real channels.
+- Contact section with placeholder channels until real data is approved.
 - Roadmap and release intent visible in the project.
 
 ## Non-goals for v1
@@ -54,8 +57,8 @@ Build a first `Sites` demo for Martina Pallottini that is modern, credible and e
 - No blog, booking flow or advanced forms yet.
 - No SEO deep work beyond basic metadata.
 
-## Release criteria for the first demo
+## Release criteria for the next iteration
 - The structure is understandable in one pass.
 - The visual direction feels newer than the current WordPress site.
 - The codebase can absorb content growth without a rewrite.
-- The project builds successfully once dependencies are installed.
+- The project builds successfully in local validation before release.

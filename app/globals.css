@@ -35,9 +35,9 @@ a {
 }
 
 .page-shell {
-  width: min(1160px, calc(100% - 32px));
+  width: min(100% - 20px, 1160px);
   margin: 0 auto;
-  padding: 32px 0 72px;
+  padding: 18px 0 56px;
 }
 
 .hero,
@@ -45,11 +45,11 @@ a {
 .card-grid,
 .contact-grid {
   display: grid;
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .hero {
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
   align-items: stretch;
 }
 
@@ -67,7 +67,7 @@ a {
 }
 
 .hero-copy {
-  padding: 36px;
+  padding: 22px;
 }
 
 .eyebrow {
@@ -88,9 +88,9 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 11ch;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 0.94;
+  max-width: 10ch;
+  font-size: clamp(2.7rem, 13vw, 4.6rem);
+  line-height: 0.96;
 }
 
 .lede,
@@ -104,16 +104,16 @@ a {
 }
 
 .lede {
-  max-width: 58ch;
-  margin: 22px 0 0;
+  max-width: 42ch;
+  margin: 18px 0 0;
   color: var(--muted);
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .button {
@@ -121,6 +121,7 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 50px;
+  width: 100%;
   padding: 0 22px;
   border-radius: 999px;
   transition: transform 180ms ease, background 180ms ease;
@@ -146,7 +147,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 28px;
+  padding: 22px;
   background:
     radial-gradient(circle at top right, rgba(174, 114, 87, 0.18), transparent 36%),
     linear-gradient(180deg, rgba(255, 252, 249, 0.9), rgba(245, 236, 228, 0.92));
@@ -163,7 +164,7 @@ a {
 
 .identity-card h2 {
   margin-top: auto;
-  font-size: 2.4rem;
+  font-size: clamp(2rem, 9vw, 2.6rem);
 }
 
 .identity-card p,
@@ -178,29 +179,23 @@ a {
 }
 
 .content-section {
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .section-head {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .section-head h2 {
-  max-width: 14ch;
-  font-size: clamp(2rem, 5vw, 3.8rem);
-  line-height: 0.98;
-}
-
-.intro-grid,
-.card-grid,
-.contact-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 12ch;
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  line-height: 1.02;
 }
 
 .intro-card,
 .feature-card,
 .contact-card {
-  padding: 24px;
+  padding: 20px;
 }
 
 .intro-card p,
@@ -210,8 +205,8 @@ a {
 }
 
 .feature-card h3 {
-  margin-top: 16px;
-  font-size: 1.8rem;
+  margin-top: 14px;
+  font-size: 1.55rem;
 }
 
 .goal-list,
@@ -236,22 +231,21 @@ a {
 }
 
 .roadmap-block {
-  padding: 28px;
+  padding: 22px;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 640px) {
+  .page-shell {
+    width: min(100% - 32px, 1160px);
+    padding-top: 28px;
+    padding-bottom: 64px;
+  }
+
   .hero,
   .intro-grid,
   .card-grid,
   .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 640px) {
-  .page-shell {
-    width: min(100% - 20px, 1160px);
-    padding-top: 18px;
+    gap: 18px;
   }
 
   .hero-copy,
@@ -260,11 +254,66 @@ a {
   .feature-card,
   .contact-card,
   .roadmap-block {
-    padding: 20px;
+    padding: 24px;
   }
 
   .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-shell {
+    padding-top: 32px;
+    padding-bottom: 72px;
+  }
+
+  .intro-grid,
+  .card-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-copy,
+  .identity-card,
+  .intro-card,
+  .feature-card,
+  .contact-card,
+  .roadmap-block {
+    padding: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    padding-top: 36px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  }
+
+  .hero-copy {
+    padding: 36px;
+  }
+
+  .identity-card,
+  .roadmap-block {
+    padding: 28px;
+  }
+
+  .section-head h2 {
+    max-width: 14ch;
+  }
+
+  .hero-copy h1 {
+    max-width: 11ch;
+    font-size: clamp(4.2rem, 8vw, 6rem);
+    line-height: 0.94;
   }
 }

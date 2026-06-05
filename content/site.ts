@@ -7,30 +7,30 @@ export const siteContent = {
     ctaHref: "#contatti",
   },
   hero: {
-    eyebrow: "Demo Sites v1",
-    title: "Uno spazio sobrio e contemporaneo per presentare Martina in modo chiaro.",
+    eyebrow: "Psicologia clinica e psicoterapia",
+    title: "Uno spazio sobrio e contemporaneo per presentare Martina con chiarezza.",
     description:
-      "Questa prima release e una demo minimale: identita, approccio, aree di intervento, studio e contatti. La base e pensata per crescere senza cambiare struttura.",
+      "Il sito raccoglie identita, approccio, aree di intervento, studio e contatti essenziali in una struttura semplice, leggibile e pronta a evolvere.",
   },
   introduction: [
     "Il sito deve trasmettere autorevolezza, accoglienza e chiarezza fin dal primo schermo.",
-    "I contenuti del WordPress attuale verranno mantenuti coerenti, ma redistribuiti con una gerarchia piu leggibile e orientata al primo contatto.",
+    "I contenuti vengono organizzati con una gerarchia piu leggibile, orientata al primo contatto e coerente con un profilo clinico professionale.",
   ],
   sections: [
     {
       id: "approccio",
       title: "Approccio",
-      body: "Ascolto, relazione e consapevolezza restano il centro. In v1 la sezione spiega in modo sintetico il taglio clinico senza appesantire la lettura.",
+      body: "Ascolto, relazione e consapevolezza restano il centro. La sezione presenta il taglio clinico in modo sintetico, senza appesantire la lettura.",
     },
     {
       id: "percorsi",
       title: "Percorsi",
-      body: "La demo anticipa le principali aree di intervento: sostegno psicologico, psicoterapia individuale, consulenza, genitorialita e percorsi per coppie.",
+      body: "La pagina anticipa le principali aree di intervento: sostegno psicologico, psicoterapia individuale, consulenza, genitorialita e percorsi per coppie.",
     },
     {
       id: "studio",
       title: "Studio e modalita",
-      body: "Il sito deve chiarire subito dove riceve Martina, la possibilita di lavorare online e il valore del setting terapeutico.",
+      body: "La presentazione chiarisce dove riceve Martina, la possibilita di lavorare online e il valore del setting terapeutico.",
     },
   ],
   contacts: [
@@ -41,18 +41,18 @@ export const siteContent = {
     },
     {
       label: "Email",
-      value: "contatti@martinaweb.demo",
+      value: "contatti@martinapallottini.it",
       href: "#",
     },
     {
       label: "Facebook",
-      value: "@martinaweb.demo",
+      value: "@martinapallottini",
       href: "#",
     },
   ],
   releaseGoals: [
-    "Presentare una direzione visiva credibile e moderna.",
-    "Validare una struttura scalabile per le prossime iterazioni.",
-    "Preparare una prima release demo su Netlify prima di qualunque migrazione dal WordPress.",
+    "Presentare una direzione visiva credibile, sobria e contemporanea.",
+    "Confermare una struttura scalabile per le prossime iterazioni.",
+    "Preparare l'integrazione dei contenuti reali prima di qualunque decisione sul sito WordPress.",
   ],
 } as const;

@@ -1,7 +1,7 @@
 # AGENTS.md
 
 ## Objective
-Develop `martinaWeb` as a modern standalone demo for Martina Pallottini, keeping the project easy to evolve and ready for a first public demo release.
+Develop `martinaWeb` as the modern replacement for `https://www.martinapallottini.it/`, keeping the project easy to evolve and ready for public release.
 
 Priority order:
 1. Correctness
@@ -10,10 +10,11 @@ Priority order:
 4. Minimal change
 
 ## Project Context
-- This project is a standalone frontend demo.
+- This project is a standalone frontend site intended to replace the current WordPress website.
 - It is not a WordPress theme.
 - The target release platform is Netlify, not Sites.
-- The current phase is iterative demo development, not final production migration.
+- The final objective is to renew `https://www.martinapallottini.it/` with a modern, mobile-first experience.
+- The site should be optimized for discoverability on Google and for content retrieval by conversational engines such as Gemini and GPT.
 
 ## Core Rules
 
@@ -34,7 +35,7 @@ Priority order:
 - Do not introduce new libraries unless they solve a real problem that the current stack cannot solve cleanly.
 
 ### Deployment awareness
-- Netlify is the target platform for demo releases.
+- Netlify is the target platform for releases.
 - Do not assume WordPress integration.
 - Keep the app buildable as a standalone project.
 
@@ -48,9 +49,15 @@ Priority order:
 - Prefer updating the content model before changing UI markup when the change is content-driven.
 
 ### When editing UI
+- Treat mobile as the default layout baseline and expand progressively for larger screens.
 - Keep sections visually distinct and readable.
 - Preserve responsive behavior.
 - Prefer simple composition over large monolithic page blocks.
+
+### Validation and release flow
+- Validate changes locally by running the relevant checks in this workspace.
+- Do not treat remote verification as part of the standard workflow unless explicitly requested.
+- Do not perform Netlify releases or remote deployment checks unless explicitly requested.
 
 ### When editing content
 - Keep placeholder data clearly identifiable.
@@ -59,8 +66,8 @@ Priority order:
 
 ## Roadmap
 
-### Phase 1 - Demo foundation
-- Maintain a clean one-page demo.
+### Phase 1 - Foundation
+- Maintain a clean one-page site.
 - Keep placeholder contacts.
 - Validate typography, spacing, hierarchy, and mobile layout.
 - Ensure the project builds locally.
@@ -74,20 +81,20 @@ Priority order:
 ### Phase 3 - Visual refinement
 - Improve imagery and section rhythm.
 - Add lightweight motion where useful.
-- Refine mobile layout and spacing.
+- Refine mobile-first layout and spacing.
 - Improve first-screen clarity and trust signals.
 
 ### Phase 4 - Netlify release preparation
 - Confirm `npm run build` works cleanly.
 - Define the correct Netlify build settings.
 - Prepare the repository structure for deployment.
-- Create a first demo release.
+- Prepare the first public release.
 
-### Phase 5 - Post-demo decisions
+### Phase 5 - Post-release decisions
 - Decide whether the approved direction should:
   - remain a standalone modern site, or
   - be ported later into WordPress
-- Plan any extra pages, forms, analytics, SEO, or booking features only after the demo is approved.
+- Plan any extra pages, forms, analytics, SEO, or booking features only after the core site direction is approved.
 
 ## Non-goals for now
 - No WordPress theme conversion

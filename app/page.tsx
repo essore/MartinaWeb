@@ -13,8 +13,8 @@ export default function Home() {
             <a className="button button-primary" href={siteContent.identity.ctaHref}>
               {siteContent.identity.ctaLabel}
             </a>
-            <a className="button button-secondary" href="#roadmap">
-              Vedi roadmap
+            <a className="button button-secondary" href="#percorso">
+              Scopri di piu
             </a>
           </div>
         </div>
@@ -35,10 +35,10 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="content-section">
+      <section className="content-section" id="percorso">
         <div className="section-head">
-          <p className="eyebrow">Architettura v1</p>
-          <h2>Una home essenziale, ma gia pronta a crescere.</h2>
+          <p className="eyebrow">Aree principali</p>
+          <h2>Una home essenziale, pensata per accompagnare il primo orientamento.</h2>
         </div>
 
         <div className="card-grid">
@@ -54,8 +54,8 @@ export default function Home() {
 
       <section className="content-section">
         <div className="section-head">
-          <p className="eyebrow">Prima release</p>
-          <h2>Cosa deve dimostrare la demo.</h2>
+          <p className="eyebrow">Obiettivi della pagina</p>
+          <h2>Cosa deve trasmettere il sito in questa fase.</h2>
         </div>
 
         <ul className="goal-list">
@@ -67,8 +67,8 @@ export default function Home() {
 
       <section className="content-section" id="contatti">
         <div className="section-head">
-          <p className="eyebrow">Contatti base</p>
-          <h2>La demo mantiene i riferimenti essenziali.</h2>
+          <p className="eyebrow">Contatti</p>
+          <h2>Riferimenti essenziali in attesa dei dati definitivi.</h2>
         </div>
 
         <div className="contact-grid">
@@ -89,14 +89,14 @@ export default function Home() {
 
       <section className="content-section roadmap-block" id="roadmap">
         <div className="section-head">
-          <p className="eyebrow">Roadmap</p>
-          <h2>Sviluppo pensato su piu giorni, non come pagina unica da rifare ogni volta.</h2>
+          <p className="eyebrow">Evoluzione</p>
+          <h2>Una base ordinata per integrare contenuti reali e affinare la presentazione.</h2>
         </div>
 
         <ol className="roadmap-list">
-          <li>V1 demo: struttura, tono visivo, sezioni minime e contatti.</li>
-          <li>V2 contenuti: testo clinico vero, studio, setting, CTA e proof points.</li>
-          <li>V3 release: responsive refinement, validazione build e deploy Netlify.</li>
+          <li>Consolidare la struttura e il tono visivo della home.</li>
+          <li>Integrare i contenuti clinici reali, lo studio e i riferimenti approvati.</li>
+          <li>Rifinire responsive, gerarchia e leggibilita prima della prossima release manuale.</li>
         </ol>
       </section>
     </main>

@@ -13,9 +13,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "martinaWeb Demo",
+  title: "Martina Pallottini",
   description:
-    "Prima demo Sites per il rifacimento del sito di Martina Pallottini.",
+    "Sito di Martina Pallottini, progettato con un approccio moderno, mobile-first e orientato alla ricerca.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
