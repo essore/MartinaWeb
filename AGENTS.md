@@ -15,6 +15,7 @@ Priority order:
 - The target release platform is Netlify, not Sites.
 - The final objective is to renew `https://www.martinapallottini.it/` with a modern, mobile-first experience.
 - The site should be optimized for discoverability on Google and for content retrieval by conversational engines such as Gemini and GPT.
+- The file `linee_guida_seo_cro_martinaweb.md` contains foundational SEO, CRO and editorial principles that must guide any future site change or content addition.
 - The current public content sources to reconcile are:
   - `https://www.martinapallottini.it/`
   - `https://www.guidapsicologi.it/studio/dottssa-martina-pallottini`
@@ -35,6 +36,27 @@ Priority order:
 - Editorial positioning should emphasize psychotherapy as Martina's current professional identity, not only generic psychological support.
 - When the two public sources differ in emphasis, prefer the framing that reflects Martina as a fully qualified psychotherapist already registered with the professional board.
 - GuidaPsicologi deserves visible but sober prominence as an external trust signal, stronger than Facebook and other secondary social references.
+- For conversion-oriented copy, prefer first person where empathy and therapeutic alliance matter most.
+- For technical SEO, metadata and institutional sections, prefer third person or nominal style so Google can clearly associate the site with Martina as a professional entity.
+
+### YMYL and E-E-A-T
+- Treat the website as YMYL health content and apply strict medical/health credibility standards.
+- Keep legal and professional data continuously aligned across the site, including professional board details and VAT information when present.
+- Avoid unverifiable claims, ambiguous credentials or outdated professional positioning that could weaken trust or trigger algorithmic penalties.
+- When credentials, qualifications, registrations or institutional references are shown, they must be consistent with the most current public sources and with `linee_guida_seo_cro_martinaweb.md`.
+
+### On-page formatting standards
+- Follow `linee_guida_seo_cro_martinaweb.md` for all future titles, metadata and heading structures.
+- Keep the `<title>` tag within 60 characters when possible.
+- Keep the meta description within 155 characters when possible.
+- Use a clear heading hierarchy with one `<h1>` per page and logically nested `<h2>` and `<h3>` sections.
+- For SEO-critical page titles, metadata and main headings, use explicit entity-based phrasing such as Martina's full professional name, profession and location when appropriate.
+
+### CRO continuity
+- Treat CRO as an ongoing practice, not as a one-off copy pass.
+- Use empathetic copy based on patient needs, doubts and entry frictions.
+- Update FAQ and reassurance content over time to reduce hesitation, clarify process and improve first-contact conversion.
+- Prefer clear, human CTAs that feel relational and direct rather than institutional or bureaucratic.
 
 ### Minimal-change default
 - Make the smallest correct change for each iteration.
@@ -61,9 +83,14 @@ Priority order:
 - Preserve responsive behavior.
 - Prefer simple composition over large monolithic page blocks.
 - A minimal collapsible menu is appropriate when it improves navigation between sections or future pages, but it must stay visually discreet and consistent with the calm clinical tone.
+- Use standard, familiar icons that are easy to recognize on small screens.
+- Prefer Lucide icons when icons are needed, with a stroke width of `1.5px` or `2px` depending on the visual balance of the component.
+- Icon choices should support mobile-first clarity and should never feel decorative, obscure or overly custom.
+- Use standard, familiar icons that are immediately recognizable on mobile and do not require interpretation.
 
 ### Validation and release flow
 - Validate changes locally by running the relevant checks in this workspace.
+- When the local dev server is already running, verify the site by navigating to `http://localhost:3000/`.
 - Do not treat remote verification as part of the standard workflow unless explicitly requested.
 - Do not perform Netlify releases or remote deployment checks unless explicitly requested.
 
@@ -71,6 +98,9 @@ Priority order:
 - Keep placeholder data clearly identifiable.
 - Avoid publishing real contact data until explicitly requested.
 - Keep important claims verifiable and professionally appropriate.
+- Use first person in the Home introduction, service descriptions, welcoming narrative and direct CTAs.
+- Use third person or nominal style in SEO metadata, institutional headings, curriculum details, legal references, board registration details and footer-style factual sections.
+- On hybrid pages such as `Chi Sono`, it is acceptable to begin in first person for empathy and then shift to a formal institutional subsection for training, titles and professional credentials.
 
 ## Roadmap
 

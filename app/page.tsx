@@ -1,8 +1,40 @@
 import { siteContent } from "../content/site";
+import { ContactCards } from "./components";
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "PsychologicalService",
+    name: "Dott.ssa Martina Pallottini",
+    description: siteContent.hero.description,
+    url: "https://www.martinapallottini.it/",
+    telephone: "+393347211002",
+    email: siteContent.identity.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteContent.identity.addressShort,
+      addressLocality: "Rapagnano",
+      addressRegion: "FM",
+      addressCountry: "IT",
+    },
+    areaServed: ["Fermo", "Rapagnano", "Online"],
+    sameAs: siteContent.secondaryLinks.map((link) => link.href),
+    knowsAbout: siteContent.knowsAbout,
+    founder: {
+      "@type": "Person",
+      name: "Martina Pallottini",
+      jobTitle: siteContent.identity.role,
+      identifier: siteContent.identity.board,
+    },
+  };
+
   return (
     <main className="page-shell">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">{siteContent.hero.eyebrow}</p>
@@ -13,8 +45,8 @@ export default function Home() {
             <a className="button button-primary" href={siteContent.identity.ctaHref}>
               {siteContent.identity.ctaLabel}
             </a>
-            <a className="button button-secondary" href="#percorso">
-              Scopri di piu
+            <a className="button button-secondary" href="/chi-sono">
+              Conosci il percorso
             </a>
           </div>
         </div>
@@ -23,6 +55,7 @@ export default function Home() {
           <span className="identity-label">Identita</span>
           <h2>{siteContent.identity.name}</h2>
           <p>{siteContent.identity.role}</p>
+          <p>{siteContent.identity.board}</p>
           <strong>{siteContent.identity.city}</strong>
         </aside>
       </section>
@@ -54,6 +87,23 @@ export default function Home() {
 
       <section className="content-section">
         <div className="section-head">
+          <p className="eyebrow">Servizi</p>
+          <h2>Una pagina dedicata ad ansia e stress.</h2>
+        </div>
+
+        <div className="trust-card">
+          <p className="lede">
+            Un approfondimento specifico spiega quando puo essere utile chiedere
+            supporto e come si struttura il percorso terapeutico.
+          </p>
+          <a className="button button-secondary" href="/servizi/ansia-e-stress">
+            Leggi ansia e stress
+          </a>
+        </div>
+      </section>
+
+      <section className="content-section">
+        <div className="section-head">
           <p className="eyebrow">Di cosa si occupa</p>
           <h2>Ambiti di supporto e percorsi costruiti sulle esigenze della persona.</h2>
         </div>
@@ -71,20 +121,7 @@ export default function Home() {
           <h2>Scegli il modo piu semplice per concordare un primo appuntamento.</h2>
         </div>
 
-        <div className="contact-grid">
-          {siteContent.contacts.map((contact) => (
-            <a
-              className="contact-card"
-              key={contact.label}
-              href={contact.href}
-              target={contact.href.startsWith("http") ? "_blank" : undefined}
-              rel={contact.href.startsWith("http") ? "noreferrer" : undefined}
-            >
-              <span>{contact.label}</span>
-              <strong>{contact.value}</strong>
-            </a>
-          ))}
-        </div>
+        <ContactCards />
 
         <p className="contact-note">
           I miei social:{" "}

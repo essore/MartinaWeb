@@ -34,10 +34,154 @@ a {
   text-decoration: none;
 }
 
+.site-header,
+.site-footer {
+  width: min(100% - 20px, 1160px);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 251, 247, 0.86);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 14px 44px rgba(61, 43, 35, 0.1);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brand span {
+  font-family: var(--font-display), serif;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.brand small {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.nav-menu {
+  position: relative;
+}
+
+.nav-menu summary {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--foreground);
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-menu nav {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  min-width: 210px;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 251, 247, 0.96);
+  box-shadow: var(--shadow);
+}
+
+.nav-menu:not([open]) nav {
+  display: none;
+}
+
+.nav-menu nav a {
+  padding: 10px 12px;
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.nav-menu nav a:hover {
+  color: var(--foreground);
+  background: rgba(174, 114, 87, 0.1);
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-bottom: 16px;
+  padding: 24px 0 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.site-footer p {
+  margin: 4px 0 0;
+}
+
+.site-footer strong,
+.site-footer a {
+  color: var(--foreground);
+}
+
+.footer-block {
+  display: grid;
+  gap: 6px;
+}
+
+.footer-label {
+  color: var(--muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-identity strong {
+  font-family: var(--font-display), serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.footer-contact a {
+  width: fit-content;
+}
+
+.footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: white !important;
+  background: var(--foreground);
+}
+
 .page-shell {
   width: min(100% - 20px, 1160px);
   margin: 0 auto;
-  padding: 18px 0 56px;
+  padding: 22px 0 64px;
 }
 
 .hero,
@@ -46,7 +190,7 @@ a {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 16px;
 }
 
 .hero {
@@ -55,6 +199,7 @@ a {
 
 .hero-copy,
 .identity-card,
+.page-intro,
 .intro-card,
 .feature-card,
 .contact-card,
@@ -80,8 +225,10 @@ a {
 }
 
 .hero-copy h1,
+.page-intro h1,
 .section-head h2,
 .identity-card h2,
+.feature-card h2,
 .feature-card h3 {
   margin: 0;
   font-family: var(--font-display), serif;
@@ -89,9 +236,19 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 10ch;
+  max-width: 12ch;
   font-size: clamp(2.7rem, 13vw, 4.6rem);
-  line-height: 0.96;
+  line-height: 1;
+}
+
+.page-intro {
+  padding: 22px;
+}
+
+.page-intro h1 {
+  max-width: 14ch;
+  font-size: clamp(2.45rem, 11vw, 4.8rem);
+  line-height: 1;
 }
 
 .lede,
@@ -105,8 +262,8 @@ a {
 }
 
 .lede {
-  max-width: 42ch;
-  margin: 18px 0 0;
+  max-width: 48ch;
+  margin: 20px 0 0;
   color: var(--muted);
 }
 
@@ -180,17 +337,17 @@ a {
 }
 
 .content-section {
-  margin-top: 18px;
+  margin-top: 28px;
 }
 
 .section-head {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .section-head h2 {
-  max-width: 12ch;
+  max-width: 16ch;
   font-size: clamp(1.8rem, 8vw, 3rem);
-  line-height: 1.02;
+  line-height: 1.06;
 }
 
 .intro-card,
@@ -207,6 +364,10 @@ a {
 
 .feature-card h3 {
   margin-top: 14px;
+  font-size: 1.55rem;
+}
+
+.feature-card h2 {
   font-size: 1.55rem;
 }
 
@@ -251,26 +412,47 @@ a {
   margin-top: 20px;
 }
 
+.content-section > .button,
+.content-section .contact-note + .button,
+.content-section .goal-list + .button {
+  margin-top: 18px;
+}
+
 .roadmap-block {
   padding: 22px;
 }
 
 @media (min-width: 640px) {
+  .site-header,
+  .site-footer {
+    width: min(100% - 32px, 1160px);
+  }
+
+  .site-header {
+    margin-top: 16px;
+  }
+
+  .site-footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
   .page-shell {
     width: min(100% - 32px, 1160px);
-    padding-top: 28px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 72px;
   }
 
   .hero,
   .intro-grid,
   .card-grid,
   .contact-grid {
-    gap: 18px;
+    gap: 20px;
   }
 
   .hero-copy,
   .identity-card,
+  .page-intro,
   .intro-card,
   .feature-card,
   .contact-card,
@@ -291,8 +473,8 @@ a {
 
 @media (min-width: 768px) {
   .page-shell {
-    padding-top: 32px;
-    padding-bottom: 72px;
+    padding-top: 38px;
+    padding-bottom: 80px;
   }
 
   .intro-grid,
@@ -303,6 +485,7 @@ a {
 
   .hero-copy,
   .identity-card,
+  .page-intro,
   .intro-card,
   .feature-card,
   .contact-card,
@@ -314,11 +497,32 @@ a {
 
 @media (min-width: 1024px) {
   .page-shell {
-    padding-top: 36px;
+    padding-top: 44px;
   }
 
   .hero {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  }
+
+  .nav-menu summary {
+    display: none;
+  }
+
+  .nav-menu nav,
+  .nav-menu:not([open]) nav {
+    position: static;
+    display: flex;
+    min-width: 0;
+    gap: 4px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .nav-menu nav a {
+    padding: 10px 12px;
+    font-size: 0.9rem;
   }
 
   .hero-copy {
@@ -331,12 +535,16 @@ a {
   }
 
   .section-head h2 {
-    max-width: 14ch;
+    max-width: 18ch;
   }
 
   .hero-copy h1 {
-    max-width: 11ch;
+    max-width: 12ch;
     font-size: clamp(4.2rem, 8vw, 6rem);
-    line-height: 0.94;
+    line-height: 0.98;
+  }
+
+  .site-footer {
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
   }
 }

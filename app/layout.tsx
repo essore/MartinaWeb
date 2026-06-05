@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
+import { SiteFooter, SiteHeader } from "./components";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -13,9 +14,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Martina Pallottini | Psicologa e psicoterapeuta a Fermo e online",
+  title: "Psicoterapeuta Fermo | Dott.ssa Martina Pallottini",
   description:
-    "Martina Pallottini, psicologa e psicoterapeuta a Fermo e online. Percorsi di ascolto, supporto psicologico e psicoterapia per bambini, adolescenti e adulti.",
+    "Dott.ssa Martina Pallottini, psicologa psicoterapeuta a Fermo e online. Scopri percorsi clinici per adulti, adolescenti e bambini.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -30,7 +31,9 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body className={`${manrope.variable} ${playfair.variable} antialiased`}>
+        <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
